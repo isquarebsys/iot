@@ -16,7 +16,7 @@ Adafruit_BMP085 bmp;
 // Provider specific variables
 #include "ThingSpeak.h"
 char thingSpeakAddress[] = "api.thingspeak.com";
-String APIKey = "0AG0FFVC7CUGYWY7";             // enter your channel's Write API Key
+String APIKey = "key";             // enter your channel's Write API Key
 const int updateThingSpeakInterval = 20 * 1000; // 20 second interval at which to update ThingSpeak
 long lastConnectionTime = 0;
 boolean lastConnected = false;

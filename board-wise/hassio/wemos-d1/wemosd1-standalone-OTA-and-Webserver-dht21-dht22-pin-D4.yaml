@@ -1,0 +1,43 @@
+esphome:
+  name: wemosd1
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  ssid: "isquarebsysc25"
+  password: "password"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Wemosd1 Fallback Hotspot"
+    password: "rNEiEzxAtpND"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+# Example configuration.yaml entry
+sensor:
+  - platform: dht
+    pin: 
+        number: 4
+        mode: INPUT
+    model: DHT22
+    temperature: 
+        name: "Temperature: "
+    humidity:
+        name: "Humidity: "
+    update_interval: 15s
+    
+web_server:
+  port: 80
+  auth:
+    username: admin
+    password: admin    
+    

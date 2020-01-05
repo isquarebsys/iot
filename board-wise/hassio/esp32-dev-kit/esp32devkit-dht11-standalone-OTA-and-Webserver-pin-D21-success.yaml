@@ -1,0 +1,41 @@
+esphome:
+  name: esp32devkit
+  platform: ESP32
+  board: esp32doit-devkit-v1
+
+wifi:
+  ssid: "isquarebsysc25"
+  password: "password"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp32Devkit Fallback Hotspot"
+    password: "6xBQYVuxjFDj"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+    
+sensor:
+  - platform: dht
+    pin: 
+        number: 21
+        mode: INPUT
+    model: DHT11
+    temperature: 
+        name: "Temperature: "
+    humidity:
+        name: "Humidity: "
+    update_interval: 30s
+
+web_server:
+  port: 80
+  auth:
+    username: admin
+    password: admin    
